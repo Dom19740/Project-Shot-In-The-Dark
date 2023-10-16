@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SHOT IN THE DARK</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header class="header">
+  <div id="title-container">
+  <h1 id="title">SHOT IN THE DARK</h1>
+  <div id="title-line"></div>
+  </div>
+  </header>
+
+  <div id="home-container">
+    <div id="home-container-text">
+      <h4>One simple game, hundreds of eccentric questions...</h4>
+      <h4>The ultimate quiz leveller, nobody knows the answers...</h4>
+      <h4>Those who can't make an educated guess...</h4>
+      <h4>can take a shot in the dark.</h4>
+    </div>
+    <h5>Age: 12+</h5>
+    <h5>Players: 2+</h5>
+        <button class="btn btn-primary" id="home-play-button">Play</button>
+  </div>
+
+    <div id="rules-container" style="display: none;">
+    <h4>Before starting:</h4>
+    <ul>
+      <li>Choose a question master to read questions and answers (or switch after each question)
+      <li>Decide whether to play as individuals or in teams
+      <li>Decide the score limit (or leave it blank for no limit)
+    </ul>
+    <h4>To play:</h4>
+    <ul>
+      <li>The question master reads a question. Every player or team guesses a different answer in turn (as you play, rotate the order, the first or last guesser sometimes has an advantage)</li>
+      <li>The question master reads the answer. The correct answer earns a point. If there are no correct answers, the nearest guess wins a point</li>
+      <li>If there is no obvious nearest guess (e.g. the answer is Denmark and everybody picked countries in Africa) then nobody gets a point</li>
+      <li>You can skip any question</li>
+      <li>If there is any doubt, the question master's decision is final</li>
+      <li>Continue until a player or team reaches the score limit</li>
+    </ul>
+    <br>
+    <button class="btn btn-primary" id="rules-setup-button">Continue</button>
+  </div>
+
+  <div id="setup-game-container" style="display: none;">
+    <label for="num-players">Number of Players:</label>
+    <input type="number" id="num-players">
+    <br>
+    <label for="winning-points">Winning Points:</label>
+    <input type="number" id="winning-points">
+    <br>
+    <button class="btn btn-primary" id="setup-continue-button">Continue</button>
+  </div>
+
+  <div id="player-name-container" style="display: none;">
+    <p id="player-name-text">Enter the name for Player 1:</p>
+    <input type="text" id="player-name-input" autofocus>
+    <br>
+    <button class="btn btn-primary" id="submit-player-name-button">Submit</button>
+  </div>
+
+  <div id="game-container">
+
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Add Point</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <td>Player 1</td>
+      <td><input type="radio" name="player1" value="addPoint"></td>
+      <td>0 points</td>
+    </tr>
+    <tr>
+      <td>Player 2</td>
+      <td><input type="radio" name="player2" value="addPoint"></td>
+      <td>0 points</td>
+    </tr>
+  </table>
+
+    <h3>Scores</h3>
+    <p id="player-scores"></p>
+    <h3>Who won the point?</h3>
+    <div id="player-list"></div>
+    <button class="btn btn-primary" id="show-answer">Show Answer</button>
+    <button class="btn btn-primary" id="next-question">Next Question</button>
+    <p id="question"></p>
+    <p id="answer" style="display: none;"></p>
+    <button class="btn btn-primary" id="quit-game">Quit Game</button>
+  </div>
+
+  <div id="game-over-container" style="display: none;">
+    <h2>Game Over</h2>
+    <ul id="player-scores-game-over"></ul>
+    <p id="winner-info"></p>
+    <button class="btn btn-primary" id="play-again">Play Again</button>
+  </div>
+
+  <div id="quit-game-container" style="display: none;">
+    <h2>Quit Game?</h2>
+    <button class="btn btn-primary" id="quit-yes">Yes</button>
+    <button class="btn btn-primary" id="quit-no">No</button>
+  </div>
+
+
+  <footer class="footer">
+    <p class="footer-text">&copy; dpbcreative.com <span id="current-year"></span></p>
+  </footer>
+
+  <script>
+    // Set the current year dynamically
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

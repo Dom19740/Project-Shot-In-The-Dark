@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SHOT IN THE DARK</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VNEDYVLHL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9VNEDYVLHL');
+</script>
+
+<body>
+  <header class="header">
+  <div id="title-container">
+  <h1 id="title">SHOT IN THE DARK</h1>
+  <div id="title-line"></div>
+  </div>
+  </header>
+
+  <div id="home-container">
+    <div id="home-container-text">
+      <h4>One simple game, hundreds of eccentric questions...</h4>
+      <h4>The ultimate quiz leveller, nobody knows the answers...</h4>
+      <h4>Those who can't make an educated guess...</h4>
+      <h4>can take a SHOT IN THE DARK.</h4>
+    </div>
+    <h5>Age: 12+</h5>
+    <h5>Players: 2+</h5>
+    <h6>It´s a game for real people, together in a real room (you can´t play together online)</h6>
+        <button class="btn btn-primary" id="home-play-button">Play</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h6>All Rights Reserved. Shot in the Dark® is a registered trademark of Shot in the Dark Game Ltd, registered in England & Wales under Company Registration Number 12412340.</h6>
+  </div>
+    <div id="rules-container" style="display: none;">
+    <h4>Before starting:</h4>
+    <ul class="rules-list">
+      <li>It´s a game for real people, together in a real room (you can´t play together online).
+      <li>Choose a question master to read questions and answers and keep score.
+      <li>Decide whether to play as individuals or in teams (2+).
+      <li>Decide the score limit (or leave it blank for no limit).
+    </ul>
+    <h4>To play:</h4>
+    <ul class="rules-list">
+      <li>READ QUESTION.
+      <li>Every player or team guesses a different answer in turn (as you play, rotate the order, the first or last guesser sometimes has an advantage, and only the first person gets to answer a True or False question if it comes up).
+      <li>SHOW ANSWER.
+      <li>ADD POINT to the player with the correct or nearest guess.
+      <li>If there is no obvious nearest guess (e.g. the answer is Denmark and everybody picked countries in Africa) then nobody gets a point.
+      <li>If there is any doubt, the question master's decision is final.
+      <li>Go to NEXT QUESTION (You can skip any question without adding a point).
+      <li>Continue until a player or team reaches the score limit.
+    </ul>
+    <br>
+    <button class="btn btn-primary" id="rules-setup-button">Continue</button>
+  </div>
+
+  <div id="setup-game-container" style="display: none;">
+    <label for="num-players">Number of Players:</label>
+    <input type="number" id="num-players">
+    <label for="winning-points">Winning Points:</label>
+    <input type="number" id="winning-points">
+    <br>
+    <button class="btn btn-secondary" id="setup-continue-button">Continue</button>
+  </div>
+
+  <div id="player-name-container" style="display: none;">
+    <p id="player-name-text">Enter the name for Player 1:</p>
+    <input type="text" id="player-name-input" autofocus>
+    <br>
+    <button class="btn btn-secondary" id="submit-player-name-button">Submit</button>
+  </div>
+
+  <div id="game-container" style="display: none;">
+
+  <table>
+    <tr>
+      <th>Player</th>
+      <th>Score</th>
+      <th>Add Point</th>
+    </tr>
+  <tr>
+    <td>
+      <p id="player-names"></p>
+    </td>
+    <td>
+      <p id="player-scores"></p>
+    </td>
+    <td>
+      <div id="player-radios"></div>
+    </td>
+  </tr>
+  </table>
+    <button class="btn btn-primary" id="show-answer">Show Answer</button>
+    <button class="btn btn-primary" id="next-question">Next Question</button>
+    <p id="question"></p>
+    <p id="answer" style="display: none;"></p>
+    <button class="btn btn-primary" id="quit-game">Quit Game</button>
+  </div>
+
+  <div id="game-over-container" style="display: none;">
+    <h2>Game Over</h2>
+    <ul id="player-scores-game-over"></ul>
+    <p id="winner-info"></p>
+    <button class="btn btn-primary" id="play-again">Play Again</button>
+  </div>
+
+  <div id="quit-game-container" style="display: none;">
+    <h3>Quit Game?</h3>
+    <button class="btn btn-primary" id="quit-yes">Yes</button>
+    <button class="btn btn-primary" id="quit-no">No</button>
+  </div>
+
+
+  <footer class="footer">
+    <p>Online version designed and created by dpbcreative.com &copy; <span id="current-year"></span></p>
+  </footer>
+
+  <script>
+    // Set the current year dynamically
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
