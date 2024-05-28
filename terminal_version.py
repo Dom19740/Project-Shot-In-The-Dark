@@ -72,7 +72,7 @@ class TriviaGame:
 
 
 if __name__ == "__main__":
-    game = TriviaGame("questions_answers.csv")
+    game = TriviaGame("terminal_questions_answers.csv")
     game.load_questions()
 
     while True:

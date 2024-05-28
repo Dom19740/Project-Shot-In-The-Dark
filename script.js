@@ -155,7 +155,7 @@ $(document).ready(function() {
     $("#answer").text(currentQuestion.answer).show();
   }
 
-  // Function to add a point for the selected player and or show next question
+  // 9. Function to add a point for the selected player and or show next question
   function addPoint() {
     if (currentPlayerIndex !== null) {
       players[currentPlayerIndex].score += 1;
@@ -214,7 +214,7 @@ $(document).ready(function() {
     $("#num-players").val("");
     $("#winning-points").val("");
     $("#player-name-container p").text("Enter the name for Player 1");
-
+ ultimate
     $("#game-over-container").hide();
     $("#game-container").hide();
     $("#setup-game-container").show();
