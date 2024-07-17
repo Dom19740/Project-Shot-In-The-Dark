@@ -214,7 +214,6 @@ $(document).ready(function() {
     $("#num-players").val("");
     $("#winning-points").val("");
     $("#player-name-container p").text("Enter the name for Player 1");
- ultimate
     $("#game-over-container").hide();
     $("#game-container").hide();
     $("#setup-game-container").show();
