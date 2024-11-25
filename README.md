@@ -2,7 +2,7 @@
 
 ### A web-based application version of a fun trivia card game.
 
-### Working project can be played here http://dpbcreative.com/shotinthedark/
+### Working project can be played here https://shotinthedark.dpbcreative.com/
 
 ### Video Demo:  <https://youtu.be/B1sqG7cLW34>
 ### Description:
@@ -35,3 +35,15 @@ In order to further develop the application, I would like to find a source of ob
 * Country: Portugal
 * Date: 23/05/2024
 
+### Purpose
+
+This repository is designed to demonstrate my skills in development.  
+It is not intended for public use, redistribution, or commercial applications.
+
+### License
+
+This project is licensed under the **Non-Commercial Use License**.  
+**You may view, use, and modify this code for personal or educational purposes only.**  
+Commercial use, redistribution, or publication of this work in any form is strictly prohibited without explicit permission from the author.
+
+If you're interested in using this project commercially, please contact me at dom@dpbcreative.com

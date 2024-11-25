@@ -1,3 +1,7 @@
+// Copyright (c) 2024 dpb creative
+// This code is licensed for non-commercial use only. See LICENSE file for details.
+
+
 $(document).ready(function() {
   var players = [];
   var questions = [];
